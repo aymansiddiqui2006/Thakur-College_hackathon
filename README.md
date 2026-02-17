@@ -1,1 +1,1 @@
-# Thakur-College_hackethon
+# Thakur-College_hackathon
