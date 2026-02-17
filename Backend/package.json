@@ -9,10 +9,9 @@
   ],
   "license": "ISC",
   "author": "ayman , shravani , prachi , paridhi",
-  "type": "commonjs",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules index.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
@@ -24,5 +23,8 @@
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.2.1",
     "multer": "^2.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
   }
 }
