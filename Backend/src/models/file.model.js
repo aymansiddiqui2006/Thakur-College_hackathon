@@ -10,7 +10,8 @@ const fileSchema = new mongoose.Schema({
   },
   keyword: {
     type: [String],
-    default: []
+    default: [],
+    required: true,
   },
   searchText: {
     type: String,
@@ -37,6 +38,10 @@ const fileSchema = new mongoose.Schema({
   uploadedBy: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
+    required: true,
+  },
+  fileUrl: {
+    type: String,
     required: true,
   }
 
