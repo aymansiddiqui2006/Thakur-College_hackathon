@@ -17,26 +17,46 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    department:{
-        type: String,
-        required: true
-    },
     role: {
       type: String,
       enum: ["student", "faculty"],
       required: true
     },
-    RollNo:{
-        type:Number,
-        required: function() {
-            return this.role === "student";
-        }
+    // Student-only fields
+    rollNo: {
+      type: Number,
+      required: function () {
+        return this.role === "student";
+      }
     },
-    FacultyPos:{
-        type:String,
-        required: function() {
-            return this.role === "faculty";
-        }
+
+    branch: {
+      type: String,
+      required: function () {
+        return this.role === "student";
+      }
+    },
+
+    semester: {
+      type: String,
+      required: function () {
+        return this.role === "student";
+      }
+    },
+
+    // Faculty-only fields
+    department: {
+      type: String,
+      required: function () {
+        return this.role === "faculty";
+      }
+    },
+
+    facultyPosition: {
+      type: String,
+      required: function () {
+        return this.role === "faculty";
+      }
     }
 },{
     timestamps: true
@@ -51,4 +71,4 @@ userSchema.pre("save", async function(next) {
 });
 
 
-export const USer=mongoose.model("User",userSchema)
+export const User=mongoose.model("User",userSchema)
