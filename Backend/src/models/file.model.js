@@ -1,25 +1,45 @@
 import mongoose from 'mongoose';
 
 const fileSchema = new mongoose.Schema({
-  title:{
+  title: {
     type: String,
     required: true,
   },
-  description:{
+  description: {
+    type: String,
+  },
+  keyword: {
+    type: [String],
+    default: []
+  },
+  searchText: {
+    type: String,
+    required: true
+  },
+
+  type: {
+    type: String,
+    enum: ["notes", "pyq", "research", "lecture"],
+    required: true,
+  },
+  branch: {
     type: String,
     required: true,
   },
-  keyword:[{
+  semester: {
     type: String,
     required: true,
-  }],
-  type:{
+  },
+  subject: {
     type: String,
-    enum:["notes", "pyq", "research", "lecture"],
+    required: true,
+  },
+  uploadedBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
     required: true,
   }
 
-
-});
+}, { timestamps: true });
 
 export const File = mongoose.model('File', fileSchema);
