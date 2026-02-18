@@ -1,8 +1,8 @@
-import ApiResponse from "../utils/ApiResponce";
-import ApiError from "../utils/ApiError";
-import asyncHandler from "../utils/AsyncHandler";
-import { File } from "../models/file.model";
-import { uploadToCloudinary } from "../utils/Cloudinary.js";
+import ApiResponse from "../utils/ApiResponse.js";
+import ApiError from "../utils/ApiError.js";
+import asyncHandler from "../utils/AsyncHandler.js";
+import { File } from "../models/file.model.js";
+import { uploadToCloudinary } from "../utils/cloudinary.js";
 
 const uploadFile = asyncHandler(async (req, res) => {
     const user = req.user;

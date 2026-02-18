@@ -1,9 +1,6 @@
-import asyncHandler from "express-async-handler";
+// src/utils/AsyncHandler.js
 
-app.get(
-  "/",
-  asyncHandler(async (req, res) => {
-    const files = await File.find();
-    res.json(files);
-  })
-);
+const asyncHandler = (fn) => (req, res, next) =>
+  Promise.resolve(fn(req, res, next)).catch(next);
+
+export default asyncHandler;
