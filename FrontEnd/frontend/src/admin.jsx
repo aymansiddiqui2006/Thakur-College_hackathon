@@ -1,5 +1,0 @@
-function admin(params) {
-    return{
-
-    }
-}
