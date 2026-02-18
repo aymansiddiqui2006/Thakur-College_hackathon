@@ -1,0 +1,46 @@
+.student-page {
+  background-color: white;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  border-bottom: 1px solid #ddd;
+}
+
+.header button {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.welcome {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.search-section input {
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.content {
+  width: 70%;
+  margin: auto;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}

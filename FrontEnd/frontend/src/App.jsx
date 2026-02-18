@@ -1,11 +1,11 @@
+import Student from "./student";
 
 function App() {
- 
   return (
     <div className="h-screen">
-      <admin/>
-   </div>
-  )
+      <Student />
+    </div>
+  );
 }
 
 export default App;
