@@ -29,3 +29,6 @@ app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
 
+import aiRoutes from "./routes/aiRoutes.js";
+
+app.use("/api/ai", aiRoutes);

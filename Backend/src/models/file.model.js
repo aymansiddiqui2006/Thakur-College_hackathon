@@ -17,7 +17,6 @@ const fileSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-
   type: {
     type: String,
     enum: ["notes", "pyq", "research", "lecture"],
@@ -43,6 +42,10 @@ const fileSchema = new mongoose.Schema({
   fileUrl: {
     type: String,
     required: true,
+  },
+  embedding: 
+  { 
+    type: Array,
   }
 
 }, { timestamps: true });
