@@ -1,11 +1,12 @@
 
+import Admin from "./Admin";
+
 function App() {
- 
   return (
     <div className="h-screen">
-      <admin/>
-   </div>
-  )
+      <Admin />
+    </div>
+  );
 }
 
 export default App;
