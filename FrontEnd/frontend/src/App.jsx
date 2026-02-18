@@ -1,10 +1,11 @@
 
-import Admin from "./Admin";
+import Home from "./Admin/Home";
+import Upload from "./Admin/Upload";
 
 function App() {
   return (
     <div className="h-screen">
-      <Admin />
+      <Home />
     </div>
   );
 }

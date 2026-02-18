@@ -58,7 +58,7 @@ export function MaterialCard({ material, onDelete }) {
 }
 
 // ── Upload Tab ─────────────────────────────────────────────────────────────
-export default function UploadPage({ materials, onUpload, showToast }) {
+export default function Upload({ materials, onUpload, showToast }) {
   const [selectedFile, setSelectedFile] = useState(null);
   const [dragOver, setDragOver] = useState(false);
   const [uploading, setUploading] = useState(false);
